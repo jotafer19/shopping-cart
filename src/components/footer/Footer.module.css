@@ -1,0 +1,41 @@
+.item-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer {
+    composes: item-display;
+    width: 100vw;
+    height: 10svh;
+    padding: 1rem;
+}
+
+.email-form {
+    composes: item-display;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: 300px;
+    padding: .3rem;
+}
+
+.submit {
+    padding: .3rem;
+}
+
+.links-container {
+    composes: item-display;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}

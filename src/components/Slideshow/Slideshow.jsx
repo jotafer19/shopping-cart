@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import slideImages from "../../data/images"
 import styles from "./Slideshow.module.css"
 import leftArrow from "../../assets/icons/left-arrow.svg"
+import rightArrow from "../../assets/icons/right-arrow.svg"
 
 export default function Slideshow() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -38,7 +39,9 @@ export default function Slideshow() {
         <button className={styles.left} onClick={handlePrevButton}>
           <img src={leftArrow} alt="Previous image" />
         </button>
-        <button className={styles.right} onClick={handleNextButton}>N</button>
+        <button className={styles.right} onClick={handleNextButton}>
+          <img src={rightArrow} alt="Next image" />
+        </button>
       </div>
     </div>
   )

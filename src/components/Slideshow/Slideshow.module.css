@@ -26,12 +26,11 @@
 .buttons-container {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     width: 100%;
     display: flex;
     justify-content: space-between;
-    opacity: 1;
-    transition: opacity .5s ease-in-out;
+    opacity: 0;
+    transition: opacity .3s linear;
 }
 
 .slideshow:hover .buttons-container {
@@ -46,17 +45,23 @@
     align-items: center;
     border: none;
     border-radius: 50%;
-    background-color: #656565;
+    background-color: #36363661;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.nav-btn:hover {
+    background-color: #363636be;
 }
 
 .left {
     composes: nav-btn;
     position: absolute;
-    left: 5px;
+    left: 10px;
 }
 
 .right {
     composes: nav-btn;
     position: absolute;
-    right: 5px;
+    right: 10px;
 }
