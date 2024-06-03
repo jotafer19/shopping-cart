@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import styles from "./Header.module.css"
 
 export default function Header() {
@@ -8,10 +9,10 @@ export default function Header() {
             </div>
             <nav>
                 <ul className={styles["links-list"]}>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="about">Home</Link></li>
+                    <li><Link href="">Shop</Link></li>
+                    <li><Link href="">Contact</Link></li>
                 </ul>
             </nav>
             <div>
