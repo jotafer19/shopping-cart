@@ -14,3 +14,12 @@
     gap: 1rem;
     list-style: none;
 }
+
+.link {
+    text-decoration: none;
+    color: rgb(7, 104, 31);
+}
+
+.active {
+    color: black;
+}
