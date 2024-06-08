@@ -23,3 +23,24 @@
 .active {
     color: black;
 }
+
+.checkout {
+    position: relative;
+}
+
+.checkout div {
+    position: absolute;
+    bottom: 0;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    font-size: .8rem;
+    font-weight: bold;
+    color: white;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(225, 85, 85);
+    border-radius: 50%;
+}

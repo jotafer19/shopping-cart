@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom"
+import PropTypes from "prop-types"
 import styles from "./Header.module.css"
 import { useState } from "react"
+import shoppingCart from "../../assets/icons/shopping-cart.svg"
 
-export default function Header() {
+export default function Header({ cartItems }) {
     const [isActive, setIsActive] = useState(0)
+
+    const allItems = cartItems.reduce((accumulator, currentValue) => accumulator + currentValue.count, 0)
 
     return (
         <header className={styles.header}>
@@ -19,8 +23,16 @@ export default function Header() {
                 </ul>
             </nav>
             <div>
-                ShopIcon
+                <Link className={`${styles.link} ${styles.checkout}`} onClick={() => setIsActive(null)} to="checkout">
+                    <img src={shoppingCart} alt="Shopping cart icon" />
+                    {allItems > 0 && <div>{allItems}</div>}
+                </Link>
+                
             </div>
         </header>
     )
+}
+
+Header.propTypes = {
+    cartItems: PropTypes.array,
 }

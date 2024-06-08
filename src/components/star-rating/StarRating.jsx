@@ -1,17 +1,17 @@
-import ReactStars from "react-rating-stars-component";
+import { Rating } from 'react-simple-star-rating';
+import propTypes from "prop-types";
+
 export default function StarRating({ rating }) {
     return (
-        <ReactStars
-        value={rating}
-
+        <Rating
+        readonly={true}
+        allowFraction={true}
+        initialValue={rating}
+        size={20}
       />
     )
 }
 
-ReactStars.defaultProps = {
-    count={5}
-    size: 24,
-    color: '#f00',
-    edit={false}
-    isHalf={true}
-  };
+StarRating.propTypes = {
+  rating: propTypes.number,
+}

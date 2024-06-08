@@ -17,7 +17,7 @@ export default function useFetchData() {
             } catch(error) {
                 setError(error);
             } finally {
-                setTimeout(() => setIsLoading(false), 500)
+                setIsLoading(false)
             }
         } 
 

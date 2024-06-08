@@ -1,0 +1,37 @@
+.container {
+    position: fixed;
+    top: 10%;
+    right: 0;
+    background-color: #f5ce73;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all .5s ease-in-out;
+}
+
+.container.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.message {
+    padding: 1rem;
+}
+
+.active .bar {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: purple;
+    animation: move-bar 4s linear infinite;
+}
+
+@keyframes move-bar {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}
+

@@ -2,9 +2,31 @@ import PropTypes from "prop-types"
 import styles from "./Card.module.css"
 import { useState } from "react"
 import StarRating from "../star-rating/StarRating"
+import { useOutletContext } from "react-router-dom"
 
-export default function Card({ item }) {
+export default function Card({ item, handleMessageContainer }) {
     const [value, setValue] = useState(1)
+    const [cartItems, setCartItems] = useOutletContext()
+
+    function handleAddItem(event, item) {
+        event.preventDefault()
+        handleMessageContainer()
+        if (cartItems.some(cartItem => cartItem.id === item.id)) {
+            const newCart = cartItems.map(cartItem => {
+                if (cartItem.id === item.id) {
+                    return { ...cartItem, count: cartItem.count + value };
+                } else {
+                    return cartItem;
+                }
+            })
+            setCartItems(newCart);
+        } else {
+            setCartItems([
+                ...cartItems,
+                { id: item.id, name: item.title, image: item.image, count: value, price: item.price }
+            ])
+        }
+    }
 
     function handleLessButton() {
         if (value <= 1) return;
@@ -13,15 +35,6 @@ export default function Card({ item }) {
 
     function handleMoreButton() {
         setValue(prevNumber => prevNumber + 1)
-    }
-
-    function handleSubmitItem(event) {
-        event.preventDefault()
-        setValue(1)
-    }
-
-    function handleInputChange(event) {
-        setValue(event.target.value)
     }
 
     return (
@@ -35,12 +48,12 @@ export default function Card({ item }) {
                     <StarRating rating={Number(item.rating.rate)}/>
                     <span>({item.rating.count})</span>
                 </div>
-                <div>${item.price}</div>
+                <div className={styles.price}>${item.price}</div>
             </div>
-            <form className={styles.form} action="#" onSubmit={handleSubmitItem}>
+            <form className={styles.form} action="#" onSubmit={(event) => handleAddItem(event, item)}>
                 <div className={styles.count}>
                     <button className={styles["change-btn"]} onClick={handleLessButton} type="button">-</button>
-                    <input type="number" value={value} onChange={handleInputChange} />
+                    <p>{value}</p>
                     <button className={styles["change-btn"]} onClick={handleMoreButton} type="button">+</button>
                 </div>
                 <button className={styles["add-btn"]} type="submit">Add to card</button>
@@ -51,4 +64,5 @@ export default function Card({ item }) {
 
 Card.propTypes = {
     item: PropTypes.object,
+    handleMessageContainer: PropTypes.func,
 }
