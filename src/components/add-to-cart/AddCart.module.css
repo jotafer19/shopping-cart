@@ -1,37 +1,38 @@
 .container {
-    position: fixed;
-    top: 10%;
-    right: 0;
-    background-color: #f5ce73;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: all .5s ease-in-out;
+  position: fixed;
+  top: 10%;
+  right: 0;
+  background-color: white;
+  color: black;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+  border: 2px solid black;
 }
 
 .container.active {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .message {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .active .bar {
-    position: absolute;
-    bottom: 0;
-    height: 2px;
-    background-color: purple;
-    animation: move-bar 4s linear infinite;
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: black;
+  animation: move-bar 4s linear infinite;
 }
 
 @keyframes move-bar {
-    from {
-        width: 100%;
-    }
+  from {
+    width: 100%;
+  }
 
-    to {
-        width: 0%;
-    }
+  to {
+    width: 0%;
+  }
 }
-

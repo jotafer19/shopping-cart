@@ -1,28 +1,31 @@
 import { useEffect, useState } from "react";
-import slideImages from "../../data/images"
-import styles from "./Slideshow.module.css"
-import leftArrow from "../../assets/icons/left-arrow.svg"
-import rightArrow from "../../assets/icons/right-arrow.svg"
+import slideImages from "../../data/images";
+import styles from "./Slideshow.module.css";
+import leftArrow from "../../assets/icons/left-arrow.svg";
+import rightArrow from "../../assets/icons/right-arrow.svg";
 
 export default function Slideshow() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const newIndex = activeIndex === slideImages.length - 1 ? 0 : activeIndex + 1;
+      const newIndex =
+        activeIndex === slideImages.length - 1 ? 0 : activeIndex + 1;
       setActiveIndex(newIndex);
-    }, 8000)
+    }, 8000);
 
-    return () => clearTimeout(timer)
-  }, [activeIndex])
+    return () => clearTimeout(timer);
+  }, [activeIndex]);
 
   function handlePrevButton() {
-    const newIndex = activeIndex === 0 ? slideImages.length - 1 : activeIndex - 1;
-    setActiveIndex(newIndex)
+    const newIndex =
+      activeIndex === 0 ? slideImages.length - 1 : activeIndex - 1;
+    setActiveIndex(newIndex);
   }
 
   function handleNextButton() {
-    const newIndex = activeIndex === slideImages.length - 1 ? 0 : activeIndex + 1;
+    const newIndex =
+      activeIndex === slideImages.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(newIndex);
   }
 
@@ -31,8 +34,16 @@ export default function Slideshow() {
       <div className={styles["slideshow-container"]}>
         {slideImages.map((slideImage, index) => {
           return (
-            <img className={`${styles.slide} ${index === activeIndex ? styles.active : ""}`} src={slideImage} alt="Home banner" key={index} />
-          )
+            <div key={index} className={`${styles.slide} ${index === activeIndex ? styles.active : ""}`}>
+              <div className={styles.text}>{slideImage.text}</div>
+              <img
+              className={styles.image}
+                src={slideImage.imageURL}
+                alt="Home banner"
+                key={index}
+              />
+            </div>
+          );
         })}
       </div>
       <div className={styles["buttons-container"]}>
@@ -44,5 +55,5 @@ export default function Slideshow() {
         </button>
       </div>
     </div>
-  )
+  );
 }

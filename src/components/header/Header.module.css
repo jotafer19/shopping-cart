@@ -1,46 +1,56 @@
 .header {
-    height: 10svh;
-    padding: 1rem;
-    border: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.links-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    list-style: none;
+  padding: 1rem;
+  height: 10svh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  composes: primaryBg from "../../App.module.css";
 }
 
 .link {
-    text-decoration: none;
-    color: rgb(7, 104, 31);
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.active {
-    color: black;
+.logo {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.links-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+li .link {
+  padding: .2rem 0;
+}
+
+li .link:hover,
+li .link.active {
+  border-bottom: 2px solid #ffffff;
 }
 
 .checkout {
-    position: relative;
+  position: relative;
 }
 
 .checkout div {
-    position: absolute;
-    bottom: 0;
-    left: -5px;
-    width: 20px;
-    height: 20px;
-    font-size: .8rem;
-    font-weight: bold;
-    color: white;
-    padding: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(225, 85, 85);
-    border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: -5px;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 50%;
 }

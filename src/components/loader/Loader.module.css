@@ -1,14 +1,21 @@
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .loader {
-    width: 200px;
-    height: 200px;
-    border: 20px solid #EAF0F6;
-    border-radius: 50%;
-    border-top: 20px solid #4596d5;
-    animation: loading 1s linear infinite;
+  width: 200px;
+  height: 200px;
+  border: 20px solid #eaf0f6;
+  border-radius: 50%;
+  border-top: 20px solid #000000;
+  animation: loading 1s linear infinite;
 }
 
 @keyframes loading {
-    to {
-        transform: rotate(1turn);
-    }
+  to {
+    transform: rotate(1turn);
+  }
 }

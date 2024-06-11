@@ -1,67 +1,81 @@
 .slideshow {
-    position: relative;
-    width: 100vw;
-    height: 80svh;
+  position: relative;
+  width: 100vw;
+  height: 80svh;
 }
 
 .slideshow-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+  z-index: 2;
 }
 
 .slide {
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .slide.active {
-    opacity: 1;
+  opacity: 1;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .buttons-container {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    opacity: 0;
-    transition: opacity .3s linear;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.3s linear;
 }
 
 .slideshow:hover .buttons-container {
-    opacity: 1;
+  opacity: 1;
 }
 
 .nav-btn {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 50%;
-    background-color: #36363661;
-    cursor: pointer;
-    transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  background-color: #36363661;
+  cursor: pointer;
+  transform: translateY(-50%);
 }
 
 .nav-btn:hover {
-    background-color: #363636be;
+  background-color: #363636be;
 }
 
 .left {
-    composes: nav-btn;
-    position: absolute;
-    left: 10px;
+  composes: nav-btn;
+  position: absolute;
+  left: 10px;
 }
 
 .right {
-    composes: nav-btn;
-    position: absolute;
-    right: 10px;
+  composes: nav-btn;
+  position: absolute;
+  right: 10px;
 }
