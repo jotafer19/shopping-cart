@@ -12,7 +12,7 @@
 .image-container {
   object-fit: cover;
   width: 100%;
-  min-height: 115px;
+  height: 115px;
 }
 
 .image-container img {

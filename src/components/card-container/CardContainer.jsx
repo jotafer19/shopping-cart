@@ -78,7 +78,7 @@ export default function CardContainer({ data }) {
       ...prevFilters,
       query: event.target.value,
     }))
-  })
+  }, [])
 
   return (
     <div className={styles.shop}>
@@ -91,7 +91,7 @@ export default function CardContainer({ data }) {
           </li>
           <li>
             <button className={filters.category === "men's clothing" ? styles.active : ""} onClick={() => handleCategoryChange("men's clothing")}>
-              Men's Clothing
+              Men&apos;s Clothing
             </button>
           </li>
           <li>
@@ -106,7 +106,7 @@ export default function CardContainer({ data }) {
           </li>
           <li>
             <button className={filters.category === "women's clothing" ? styles.active : ""} onClick={() => handleCategoryChange("women's clothing")}>
-              Women's Clothing
+              Women&apos;s Clothing
             </button>
           </li>
         </ul>
@@ -127,13 +127,19 @@ export default function CardContainer({ data }) {
           </div>
           <div className={styles.items}>
             <AddCart confirmCart={confirmCart} />
-            {filteredData.map((item) => (
-              <Card
-                key={item.id}
-                item={item}
-                handleMessageContainer={handleCartConfirmation}
-              />
-            ))}
+            <div className={styles.products}>
+              {filteredData.length === 0 ? (
+                <div>No products found</div>
+              ) : (
+                filteredData.map((item) => (
+                  <Card
+                    key={item.id}
+                    item={item}
+                    handleMessageContainer={handleCartConfirmation}
+                  />
+                ))
+              )}
+            </div>
           </div>
         </div>
       </div>
