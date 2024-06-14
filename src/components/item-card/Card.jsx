@@ -69,7 +69,7 @@ export default function Card({ item, handleMessageContainer }) {
           >
             -
           </button>
-          <p>{value}</p>
+          <p data-testid="item-count">{value}</p>
           <button
             className={styles["change-btn"]}
             onClick={handleMoreButton}

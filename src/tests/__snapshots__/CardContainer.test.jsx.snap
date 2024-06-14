@@ -1,0 +1,158 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Test CardContainer component > render component 1`] = `
+<div>
+  <div
+    class="_shop_4ea041"
+  >
+    <div
+      class="_category_4ea041"
+    >
+      <ul>
+        <li>
+          <button
+            class="_active_4ea041"
+          >
+            All Products
+          </button>
+        </li>
+        <li>
+          <button
+            class=""
+          >
+            Men's Clothing
+          </button>
+        </li>
+        <li>
+          <button
+            class=""
+          >
+            Jewelery
+          </button>
+        </li>
+        <li>
+          <button
+            class=""
+          >
+            Electronics
+          </button>
+        </li>
+        <li>
+          <button
+            class=""
+          >
+            Women's Clothing
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="_container_4ea041"
+    >
+      <div
+        class="_filter_4ea041"
+      >
+        <input
+          class="_search_4ea041"
+          id="search"
+          name="search"
+          placeholder="Search products..."
+          type="text"
+          value=""
+        />
+        <div
+          class="_select_4ea041"
+        >
+          <label
+            for="sort-order"
+          >
+            Sort by
+          </label>
+          <select
+            id="sort-order"
+            name="sort-order"
+          >
+            <option
+              value="recommended"
+            >
+              Recommended
+            </option>
+            <option
+              value="a-z"
+            >
+              Alphabetical (A-Z)
+            </option>
+            <option
+              value="z-a"
+            >
+              Alphabetical (Z-A)
+            </option>
+            <option
+              value="low-high"
+            >
+              Price: low to high
+            </option>
+            <option
+              value="high-low"
+            >
+              Price: high to low
+            </option>
+          </select>
+        </div>
+      </div>
+      <div
+        class="_items_4ea041"
+      >
+        <div
+          class="_container_ddcde1 "
+        >
+          <div
+            class="_message_ddcde1"
+          >
+            Item added to cart!
+          </div>
+          <div
+            class="_bar_ddcde1"
+          />
+        </div>
+        <div
+          class="_products_4ea041"
+        >
+          <div
+            data-testid="card"
+          >
+            <img
+              src="#"
+            />
+            <div>
+              foo
+            </div>
+            <div>
+              3.1
+            </div>
+            <div>
+              1
+            </div>
+          </div>
+          <div
+            data-testid="card"
+          >
+            <img
+              src="#"
+            />
+            <div>
+              bar
+            </div>
+            <div>
+              4
+            </div>
+            <div>
+              5
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

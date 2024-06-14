@@ -3,6 +3,7 @@ import slideImages from "../../data/images";
 import styles from "./Slideshow.module.css";
 import leftArrow from "../../assets/icons/left-arrow.svg";
 import rightArrow from "../../assets/icons/right-arrow.svg";
+import { Link } from "react-router-dom";
 
 export default function Slideshow() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -35,7 +36,10 @@ export default function Slideshow() {
         {slideImages.map((slideImage, index) => {
           return (
             <div key={index} className={`${styles.slide} ${index === activeIndex ? styles.active : ""}`}>
-              <div className={styles.text}>{slideImage.text}</div>
+              <div className={`${styles.text} ${index % 2 === 0 ? styles.rposition : styles.lposition}`}>
+                {slideImage.text}
+                <Link className={styles.link} to="/shop"><button>Go to the shop</button></Link>
+                </div>
               <img
               className={styles.image}
                 src={slideImage.imageURL}

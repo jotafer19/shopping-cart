@@ -1,0 +1,122 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Homepage component > Renders homepage 1`] = `
+<div>
+  <div
+    class="_slideshow_b894e2"
+  >
+    <div
+      class="_slideshow-container_b894e2"
+    >
+      <div
+        class="_slide_b894e2 _active_b894e2"
+      >
+        <div
+          class="_text_b894e2 _rposition_b894e2"
+        >
+          New collection
+          <a
+            class="_link_b894e2"
+            href="/shop"
+          >
+            <button>
+              Go to the shop
+            </button>
+          </a>
+        </div>
+        <img
+          alt="Home banner"
+          class="_image_b894e2"
+          src="/src/assets/images/shop-image-1.jpg"
+        />
+      </div>
+      <div
+        class="_slide_b894e2 "
+      >
+        <div
+          class="_text_b894e2 _lposition_b894e2"
+        >
+          New products to enjoy this summer
+          <a
+            class="_link_b894e2"
+            href="/shop"
+          >
+            <button>
+              Go to the shop
+            </button>
+          </a>
+        </div>
+        <img
+          alt="Home banner"
+          class="_image_b894e2"
+          src="/src/assets/images/shop-image-2.jpg"
+        />
+      </div>
+      <div
+        class="_slide_b894e2 "
+      >
+        <div
+          class="_text_b894e2 _rposition_b894e2"
+        >
+          Update your devices!
+          <a
+            class="_link_b894e2"
+            href="/shop"
+          >
+            <button>
+              Go to the shop
+            </button>
+          </a>
+        </div>
+        <img
+          alt="Home banner"
+          class="_image_b894e2"
+          src="/src/assets/images/shop-image-3.jpg"
+        />
+      </div>
+      <div
+        class="_slide_b894e2 "
+      >
+        <div
+          class="_text_b894e2 _lposition_b894e2"
+        >
+          The best gifs for your friends
+          <a
+            class="_link_b894e2"
+            href="/shop"
+          >
+            <button>
+              Go to the shop
+            </button>
+          </a>
+        </div>
+        <img
+          alt="Home banner"
+          class="_image_b894e2"
+          src="/src/assets/images/shop-image-4.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="_buttons-container_b894e2"
+    >
+      <button
+        class="_left_b894e2"
+      >
+        <img
+          alt="Previous image"
+          src="/src/assets/icons/left-arrow.svg"
+        />
+      </button>
+      <button
+        class="_right_b894e2"
+      >
+        <img
+          alt="Next image"
+          src="/src/assets/icons/right-arrow.svg"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -33,29 +33,11 @@ export default function Header({ cartItems }) {
           </li>
           <li>
             <Link
-              className={`${styles.link} ${isActive === 1 && styles.active}`}
-              to="about"
-              onClick={() => setIsActive(1)}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
               className={`${styles.link} ${isActive === 2 && styles.active}`}
               to="shop"
               onClick={() => setIsActive(2)}
             >
               Shop
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`${styles.link} ${isActive === 3 && styles.active}`}
-              href=""
-              onClick={() => setIsActive(3)}
-            >
-              Contact
             </Link>
           </li>
         </ul>
